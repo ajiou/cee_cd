@@ -10,10 +10,10 @@
         let now = new Date().getTime(),
         delta = countDown - now;
 
-        document.getElementById("days").innerText = Math.floor(delta / (day)),
-        document.getElementById("hours").innerText = Math.floor((delta % (day)) / (hour)),
-        document.getElementById("minutes").innerText = Math.floor((delta % (hour)) / (minute)),
-        document.getElementById("seconds").innerText = Math.floor((delta % (minute)) / second);
+        document.getElementById("days").innerText = Math.floor(delta / (day)) < 10 ? "0" + Math.floor(delta / (day)):Math.floor(delta / (day));
+        document.getElementById("hours").innerText = Math.floor((delta % (day)) / (hour)) < 10 ? "0" + Math.floor((delta % (day)) / (hour)) : Math.floor((delta % (day)) / (hour)) ;
+        document.getElementById("minutes").innerText = Math.floor((delta % (hour)) / (minute)) < 10 ? "0" + Math.floor((delta % (hour)) / (minute)) : Math.floor((delta % (hour)) / (minute));
+        document.getElementById("seconds").innerText = Math.floor((delta % (minute)) / second) < 10 ? "0" + Math.floor((delta % (minute)) / second) : Math.floor((delta % (minute)) / second);
 
         if (delta < 0) {
             let headline = document.getElementById("headline"),
