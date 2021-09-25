@@ -115,6 +115,11 @@ a:link, a:visited, a:hover, a:active {
         font-size: 3.375rem;
     }
 }
+@media only screen and (min-width: 768px) {
+    .container{
+        width: 35vw;
+    }
+}
 
 @media only screen and (min-width: 1070px) {
     .container{
@@ -122,9 +127,9 @@ a:link, a:visited, a:hover, a:active {
     }
 }
 
-@media only screen and (min-width: 1235px) {
+@media only screen and (min-width: 1200px) {
     .container{
-        width: 25vw;
+        width: 50vw;
     }
 }
 
